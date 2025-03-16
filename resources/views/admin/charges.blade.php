@@ -17,17 +17,17 @@
                     <h4 class="card-title">Charge Details</h4>
 
                     @if(Session::has('wrong'))
-              
+
                     <div class="alert">
-                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                   <strong>Opps !</strong> {{Session::get('wrong')}}
                 </div>
                 <br>
                     @endif
                     @if(Session::has('success'))
-              
+
                     <div class="success">
-                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                   <strong>Congrats !</strong> {{Session::get('success')}}
                 </div>
                     <br>
@@ -36,12 +36,12 @@
                       <table class="table">
                         <thead>
                           <tr>
-                          
-           
+
+
                             <th> ID </th>
                             <th> Name </th>
                             <th> Amount </th>
-      
+
 
                             <th> Action </th>
                           </tr>
@@ -50,21 +50,21 @@
 
                         @foreach($charges as $charge)
                           <tr>
-                           
+
                             <td>
                               <span>{{ $charge->id }}</span>
                             </td>
                             <td> {{ $charge->name }} </td>
 
 
-                         
 
 
-                            <td>  {{  $charge->price }} Tk</td>
+
+                            <td>  {{  $charge->price }} CHF</td>
 
 
-                
-                     
+
+
 
 
                             <td>
@@ -75,7 +75,7 @@
                           </tr>
 
                         @endforeach
-                       
+
                         </tbody>
                       </table>
                     </div>

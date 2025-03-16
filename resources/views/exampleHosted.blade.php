@@ -65,7 +65,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
                     <span>Total (BDT)</span>
-                    <strong>1200 TK</strong>
+                    <strong>1200 CHF</strong>
                 </li>
             </ul>
         </div>
@@ -185,7 +185,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        
+
 <script>
     (function (window, document) {
         var loader = function () {

@@ -11,17 +11,17 @@
 <br>
 
 @if(Session::has('wrong'))
-              
+
               <div class="alert">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <strong>Opps !</strong> {{Session::get('wrong')}}
           </div>
           <br>
               @endif
               @if(Session::has('success'))
-         
+
               <div class="success">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <strong>Congrats !</strong> {{Session::get('success')}}
           </div>
               <br>
@@ -29,8 +29,8 @@
 
 <?php
 
-   
-  
+
+
     $i=1;
 
 
@@ -39,7 +39,7 @@
 
 <?php
 
-                            
+
 $total_rate=DB::table('rates')->where('product_id',$product->id)
 ->sum('star_value');
 
@@ -73,7 +73,7 @@ $per_rate=number_format($per_rate, 1);
 
 @if($i%3==1)
 <div class="card-deck" style="margin-top:20px;">
- 
+
 @endif
 
 
@@ -82,7 +82,7 @@ $per_rate=number_format($per_rate, 1);
     <div class="card-body">
       <h5 class="card-title">{{ $product->name }}</h5>
       <p class="card-text">{{ $product->description }}</p>
-  
+
       <p style = "text-transform:capitalize;">Catagory : {{ $product->catagory }}</p>
       @if($product->session==0)
       <p style = "text-transform:capitalize;">Season : Breakfast</p>
@@ -93,7 +93,7 @@ $per_rate=number_format($per_rate, 1);
       @if($product->session==2)
       <p style = "text-transform:capitalize;">Season : Day</p>
       @endif
-      <p style = "text-transform:capitalize;">Price : {{ $product->price }} Tk</p>
+      <p style = "text-transform:capitalize;">Price : {{ $product->price }} CHF</p>
       @if($product->available =="Stock")
 
       <p style = "text-transform:capitalize;">Available : Stock </p>
@@ -119,7 +119,7 @@ $per_rate=number_format($per_rate, 1);
       </small>
     </div>
   </div>
-  
+
 
   @if($i%3==0)
 
@@ -130,8 +130,8 @@ $per_rate=number_format($per_rate, 1);
 
 <?php
 
-   
-  
+
+
     $i++;
 
 
@@ -157,9 +157,9 @@ $per_rate=number_format($per_rate, 1);
 
 
   <div class="card" style="background-color:black;"></div>
-  
+
   <div class="card" style="background-color:black;"></div>
-  
+
 
 
 
@@ -168,7 +168,7 @@ $per_rate=number_format($per_rate, 1);
 
 
 
-  
+
 
 @endif
 

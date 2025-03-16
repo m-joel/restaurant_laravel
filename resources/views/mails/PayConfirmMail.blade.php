@@ -17,7 +17,7 @@
                             $date=Session::get('date')
 
                     ?>
-       
+
 		    	</address>
     		</div>
            <center> <h1>MidwayCafe</h1> </center>
@@ -25,12 +25,12 @@
     		<div class="span4 well">
     			<table class="invoice-head" style="margin-left:20px;font-size:18px;">
     				<tbody>
-                 
+
                     <tr style="text-align:left">
     						<td class="pull-right"><strong>Invoice No  </strong></td>
     						<td style="text-align:left">: {{ $invoice_no }}</td>
     					</tr>
-  
+
     					<tr style="text-align=left">
     						<td class="pull-right" style="text-align:left"><strong>Customer Name  </strong></td>
     						<td style="text-align:left">: {{  Auth::user()->name  }}</td>
@@ -49,14 +49,14 @@
     						<td class="pull-right" style="text-align:left"><strong>Payment Method  </strong></td>
     						<td style="text-align:left">: Online Payment</td>
     					</tr>
-    					
+
     					<tr style="text-align=left">
-                           
+
     						<td class="pull-right" style="text-align:left"><strong>Date  </strong></td>
     						<td  style="text-align:left">: {{ $date }}</td>
-                    
+
     					</tr>
-    					
+
     				</tbody>
     			</table>
     		</div>
@@ -85,7 +85,7 @@
 						<td style="margin-left:20px;">{{ $product->name }}</td>
 						<td style="margin-left:20px;">{{ $product->price }}</td>
 						<td style="margin-left:20px;">{{ $product->quantity }}</td>
-                      <td style="margin-left:20px;">{{ $product->subtotal }} Tk</td>
+                      <td style="margin-left:20px;">{{ $product->subtotal }} CHF</td>
 						</tr>
                     @endforeach
                     @foreach($extra_charge as $charge)
@@ -93,7 +93,7 @@
 						<td style="margin-left:20px;">{{ $charge->name }}</td>
 						<td style="margin-left:20px;"></td>
 						<td style="margin-left:20px;"></td>
-                      <td style="margin-left:20px;">{{ $charge->price }} Tk</td>
+                      <td style="margin-left:20px;">{{ $charge->price }} CHF</td>
 						</tr>
                     @endforeach
 
@@ -102,13 +102,13 @@
 <tr>
 							<td colspan="2">&nbsp;</td>
 							<td><strong>Total</strong></td>
-							<td><strong>{{  $without_discount_price }} Tk</strong></td>
+							<td><strong>{{  $without_discount_price }} CHF</strong></td>
 						</tr>
             <tr><td colspan="4"></td></tr>
 <tr>
 							<td colspan="2">&nbsp;</td>
 							<td><strong>Discount</strong></td>
-							<td><strong>{{  $discount_price }} Tk</strong></td>
+							<td><strong>{{  $discount_price }} CHF</strong></td>
 						</tr>
             <tr><td colspan="4"></td></tr>
 <tr>
@@ -116,7 +116,7 @@
 <tr>
 							<td colspan="2">&nbsp;</td>
 							<td><strong>Total</strong></td>
-							<td><strong>{{  $total }} Tk</strong></td>
+							<td><strong>{{  $total }} CHF</strong></td>
 						</tr>
 					</tbody>
 				</table>
@@ -139,7 +139,7 @@
   	    	<div class="span3">
   		        <strong>Email:</strong> <a href="sajeebchakraborty.cse2000@gmail.com">sajeebchakraborty.cse2000@gmail.com</a>
   	    	</div>
-  	    
+
   		</div>
     </div>
 

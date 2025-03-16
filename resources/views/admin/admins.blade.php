@@ -17,17 +17,17 @@
                     <h4 class="card-title">Admin Details</h4>
 
                     @if(Session::has('wrong'))
-              
+
                     <div class="alert">
-                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                   <strong>Opps !</strong> {{Session::get('wrong')}}
                 </div>
                 <br>
                     @endif
                     @if(Session::has('success'))
-              
+
                     <div class="success">
-                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                   <strong>Congrats !</strong> {{Session::get('success')}}
                 </div>
                     <br>
@@ -36,17 +36,17 @@
                       <table class="table">
                         <thead>
                           <tr>
-                          
-           
+
+
                             <th> ID </th>
                             <th> Name </th>
                             <th> Email </th>
                             <th> Phone</th>
-                          
+
 
                             <th>Type</th>
                             <th>Salary</th>
-                        
+
 
 
                             <th> Action </th>
@@ -56,7 +56,7 @@
 
                         @foreach($admins as $admin)
                           <tr>
-                           
+
                             <td>
                               <span>{{ $admin->id }}</span>
                             </td>
@@ -64,9 +64,9 @@
 
 
 
-                            
-                         
-                         
+
+
+
 
 
 
@@ -85,7 +85,7 @@
 
                                   Super Admin
 
-                            @endif                     
+                            @endif
                             @if($admin->usertype=="3")
 
 
@@ -98,8 +98,8 @@
                             </td>
 
 
-                            
-                     <td>{{ $admin->salary }} Tk</td>
+
+                     <td>{{ $admin->salary }} CHF</td>
 
 
                             <td>
@@ -110,7 +110,7 @@
                           </tr>
 
                         @endforeach
-                       
+
                         </tbody>
                       </table>
                     </div>

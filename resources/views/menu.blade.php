@@ -19,7 +19,7 @@
                 <td>
                     <img src="{{asset('assets/images/'.$product->image)}}" height=150px width=180px></td>
                     <td><h2>{{$product->name}}</h2>
-                    <h4>৳{{$product->price}}</h4>
+                    <h4>CHF{{$product->price}}</h4>
                     <p>{{$product->description}}</p>
                     <form method="post" action="{{route('cart.store', $product)}}">
                         @csrf
@@ -27,7 +27,7 @@
 
                         <?php
 
-                            
+
                                 $total_rate=DB::table('rates')->where('product_id',$product->id)
                                 ->sum('star_value');
 
@@ -56,9 +56,9 @@
                                 $fraction = $per_rate - $whole
 
                                 ?>
-                     
-              
-                        
+
+
+
                         <span class="product_rating">
                         @for($i=1;$i<=$whole;$i++)
 
@@ -71,14 +71,14 @@
                         <i class="fa fa-star-half"></i>
 
                         @endif
-                            
-                            
+
+
                         <span class="rating_avg">({{  $per_rate}})</span>
             </span>
-            
+
             <br>
             <br>
-                       
+
                         @if($product->available=="Stock")
                         <input type="number" name="number" style="width:50px;" id="myNumber" value="1">
                         <button class="btn btn-success">Add to Cart</button>
